@@ -1,0 +1,494 @@
+
+.rocket-trail {
+  background: linear-gradient(45deg, 
+    transparent 0%, 
+    hsla(16,100%,50%,0.3) 20%, 
+    hsla(33,100%,50%,0.5) 40%, 
+    hsla(51,100%,50%,0.7) 60%, 
+    hsla(0,0%,100%,0.9) 80%, 
+    transparent 100%);
+  animation: trail 3s ease-in-out infinite;
+}
+
+.countdown-digit {
+  background: linear-gradient(135deg, hsl(222,12%,20%) 0%, hsl(220,9%,25%) 100%);
+  border: 2px solid hsl(var(--primary));
+  box-shadow: 
+    inset 0 2px 4px hsla(0,0%,0%,0.3),
+    0 0 20px hsla(var(--primary),0.3);
+}
+.light .countdown-digit {
+  background: linear-gradient(135deg, hsl(0,0%,95%) 0%, hsl(0,0%,90%) 100%);
+  border: 2px solid hsl(var(--primary));
+  box-shadow: 
+    inset 0 1px 2px hsla(0,0%,0%,0.1),
+    0 0 15px hsla(var(--primary),0.2);
+}
+
+.fuel-progress {
+  background: linear-gradient(90deg, 
+    hsl(0,84%,60%) 0%, 
+    hsl(23,96%,53%) 25%, 
+    hsl(46,84%,49%) 50%, 
+    hsl(145,63%,49%) 75%, 
+    hsl(217,91%,60%) 100%);
+}
+
+.ticket-available {
+  background: linear-gradient(135deg, hsl(145,63%,49%) 0%, hsl(150,69%,38%) 100%);
+  box-shadow: 0 0 15px hsla(145,63%,49%,0.4);
+}
+.light .ticket-available {
+  background: linear-gradient(135deg, hsl(145,58%,59%) 0%, hsl(150,59%,48%) 100%);
+  box-shadow: 0 0 10px hsla(145,58%,59%,0.3);
+}
+
+.ticket-sold {
+  background: linear-gradient(135deg, hsl(215,14%,47%) 0%, hsl(220,13%,31%) 100%);
+}
+.light .ticket-sold {
+  background: linear-gradient(135deg, hsl(215,14%,77%) 0%, hsl(220,13%,61%) 100%);
+}
+
+.mission-card {
+  background: linear-gradient(135deg, 
+    hsla(222,47%,11%,0.9) 0%, 
+    hsla(217,33%,17%,0.8) 50%, 
+    hsla(222,47%,11%,0.9) 100%);
+  border: 1px solid hsla(var(--primary), 0.3);
+  transition: all 0.3s ease;
+}
+.light .mission-card {
+  background: linear-gradient(135deg, 
+    hsla(0,0%,100%,0.9) 0%, 
+    hsla(0,0%,98%,0.8) 50%, 
+    hsla(0,0%,100%,0.9) 100%);
+  border: 1px solid hsla(var(--primary), 0.4);
+  box-shadow: 0 5px 15px hsla(0,0%,0%,0.05);
+}
+
+.mission-card:hover {
+  border-color: hsla(var(--primary), 0.6);
+  box-shadow: 0 10px 30px hsla(var(--primary), 0.2);
+  transform: translateY(-5px);
+}
+.light .mission-card:hover {
+  border-color: hsla(var(--primary), 0.7);
+  box-shadow: 0 10px 25px hsla(var(--primary), 0.15);
+}
+
+.space-gradient {
+  background: linear-gradient(135deg, 
+    hsl(222,47%,11%) 0%, 
+    hsl(217,33%,17%) 25%, 
+    hsl(215,25%,27%) 50%, 
+    hsl(217,33%,17%) 75%, 
+    hsl(222,47%,11%) 100%);
+}
+.light .space-gradient {
+  background: linear-gradient(135deg, 
+    hsl(0,0%,98%) 0%, 
+    hsl(0,0%,95%) 25%, 
+    hsl(0,0%,92%) 50%, 
+    hsl(0,0%,95%) 75%, 
+    hsl(0,0%,98%) 100%);
+}
+
+.rocket-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.rocket-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px hsla(var(--primary), 0.4);
+}
+.light .rocket-button:hover {
+  box-shadow: 0 8px 20px hsla(var(--primary), 0.25);
+}
+
+.rocket-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, hsla(0,0%,100%,0.15), transparent);
+  transition: left 0.5s;
+}
+.light .rocket-button::before {
+  background: linear-gradient(90deg, transparent, hsla(0,0%,100%,0.3), transparent);
+}
+
+.rocket-button:hover::before {
+  left: 100%;
+}
+
+.space-panel {
+  background: linear-gradient(135deg, 
+    hsla(222,47%,11%,0.95) 0%, 
+    hsla(217,33%,17%,0.9) 50%, 
+    hsla(222,47%,11%,0.95) 100%);
+  border: 2px solid hsla(var(--primary), 0.3);
+  box-shadow: 
+    inset 0 2px 4px hsla(0,0%,0%,0.3),
+    0 0 30px hsla(var(--primary), 0.2);
+}
+.light .space-panel {
+  background: linear-gradient(135deg, 
+    hsl(0,0%,100%) 0%, 
+    hsl(0,0%,98%) 50%, 
+    hsl(0,0%,100%) 100%);
+  border: 1px solid hsl(var(--border));
+  box-shadow: 
+    inset 0 1px 2px hsla(0,0%,0%,0.05),
+    0 5px 20px hsla(0,0%,0%,0.05);
+}
+
+.control-button {
+  background: linear-gradient(135deg, hsl(220,9%,25%) 0%, hsl(215,14%,31%) 100%);
+  border: 1px solid hsl(215,14%,47%);
+  transition: all 0.2s ease;
+}
+.light .control-button {
+  background: linear-gradient(135deg, hsl(0,0%,95%) 0%, hsl(0,0%,90%) 100%);
+  border: 1px solid hsl(var(--border));
+}
+
+.control-button:hover {
+  background: linear-gradient(135deg, hsl(215,14%,31%) 0%, hsl(215,14%,47%) 100%);
+  box-shadow: 0 0 15px hsla(215,14%,47%,0.4);
+}
+.light .control-button:hover {
+   background: linear-gradient(135deg, hsl(0,0%,90%) 0%, hsl(0,0%,85%) 100%);
+   box-shadow: 0 0 10px hsla(0,0%,0%,0.1);
+}
+
+.control-button:active {
+  transform: scale(0.95);
+}
+
+.launch-sequence {
+  background: radial-gradient(circle at center, 
+    hsla(var(--primary),0.8) 0%, 
+    hsla(23,96%,53%,0.6) 30%, 
+    hsla(46,84%,49%,0.4) 60%, 
+    transparent 100%);
+  animation: launchGlow 1s ease-in-out infinite alternate;
+}
+.light .launch-sequence {
+  background: radial-gradient(circle at center, 
+    hsla(var(--primary),0.6) 0%, 
+    hsla(23,96%,63%,0.4) 30%, 
+    hsla(46,84%,59%,0.3) 60%, 
+    transparent 100%);
+}
+
+.winner-celebration {
+  background: radial-gradient(circle at center, 
+    hsla(145,63%,49%,0.8) 0%, 
+    hsla(158,82%,46%,0.6) 30%, 
+    hsla(163,93%,41%,0.4) 60%, 
+    transparent 100%);
+  animation: celebrate 0.5s ease-in-out infinite alternate;
+}
+.light .winner-celebration {
+  background: radial-gradient(circle at center, 
+    hsla(145,63%,59%,0.6) 0%, 
+    hsla(158,82%,56%,0.4) 30%, 
+    hsla(163,93%,51%,0.3) 60%, 
+    transparent 100%);
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #ffd700;
+  animation: confettiFall 3s linear infinite;
+}
+
+.confetti:nth-child(odd) {
+  background: #ff6b6b;
+  animation-delay: 0.5s;
+}
+
+.confetti:nth-child(even) {
+  background: #4ecdc4;
+  animation-delay: 1s;
+}
+
+.mission-status-active {
+  background: linear-gradient(90deg, hsl(145,63%,49%), hsl(150,69%,38%));
+  box-shadow: 0 0 20px hsla(145,63%,49%,0.4);
+}
+.light .mission-status-active {
+  background: linear-gradient(90deg, hsl(145,58%,59%), hsl(150,59%,48%));
+  box-shadow: 0 0 15px hsla(145,58%,59%,0.3);
+}
+
+
+.mission-status-pending {
+  background: linear-gradient(90deg, hsl(46,84%,49%), hsl(45,75%,43%));
+  box-shadow: 0 0 20px hsla(46,84%,49%,0.4);
+}
+.light .mission-status-pending {
+  background: linear-gradient(90deg, hsl(46,74%,59%), hsl(45,65%,53%));
+  box-shadow: 0 0 15px hsla(46,74%,59%,0.3);
+}
+
+.mission-status-completed {
+  background: linear-gradient(90deg, hsl(217,91%,60%), hsl(221,83%,53%));
+  box-shadow: 0 0 20px hsla(217,91%,60%,0.4);
+}
+.light .mission-status-completed {
+  background: linear-gradient(90deg, hsl(217,81%,70%), hsl(221,73%,63%));
+  box-shadow: 0 0 15px hsla(217,81%,70%,0.3);
+}
+
+.astronaut-avatar {
+  background: linear-gradient(135deg, hsl(222,12%,20%) 0%, hsl(220,9%,25%) 100%);
+  border: 2px solid hsl(var(--primary));
+  box-shadow: 0 0 15px hsla(var(--primary),0.3);
+}
+.light .astronaut-avatar {
+  background: linear-gradient(135deg, hsl(0,0%,95%) 0%, hsl(0,0%,90%) 100%);
+  border: 2px solid hsl(var(--primary));
+  box-shadow: 0 0 10px hsla(var(--primary),0.2);
+}
+
+.product-hover-effect {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-hover-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    transparent 0%, 
+    hsla(var(--primary),0.05) 50%, 
+    transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.light .product-hover-effect::before {
+   background: linear-gradient(45deg, 
+    transparent 0%, 
+    hsla(var(--primary),0.1) 50%, 
+    transparent 100%);
+}
+
+.product-hover-effect:hover::before {
+  opacity: 1;
+}
+
+.product-hover-effect:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 35px hsla(var(--primary),0.3);
+}
+.light .product-hover-effect:hover {
+  box-shadow: 0 10px 25px hsla(var(--primary),0.15);
+}
+
+.checkout-panel {
+  background: linear-gradient(135deg, 
+    hsla(222,47%,11%,0.98) 0%, 
+    hsla(217,33%,17%,0.95) 50%, 
+    hsla(222,47%,11%,0.98) 100%);
+  border: 2px solid hsla(var(--primary), 0.4);
+  box-shadow: 
+    inset 0 2px 4px hsla(0,0%,0%,0.3),
+    0 0 40px hsla(var(--primary), 0.3);
+}
+.light .checkout-panel {
+  background: linear-gradient(135deg, 
+    hsl(0,0%,100%) 0%, 
+    hsl(0,0%,98%) 50%, 
+    hsl(0,0%,100%) 100%);
+  border: 1px solid hsl(var(--border));
+  box-shadow: 
+    inset 0 1px 2px hsla(0,0%,0%,0.05),
+    0 10px 30px hsla(0,0%,0%,0.1);
+}
+
+.radar-sweep {
+  background: conic-gradient(from 0deg, 
+    transparent 0deg, 
+    hsla(145,63%,49%,0.3) 45deg, 
+    hsla(145,63%,49%,0.6) 90deg, 
+    hsla(145,63%,49%,0.3) 135deg, 
+    transparent 180deg, 
+    transparent 360deg);
+  animation: radarSpin 4s linear infinite;
+}
+.light .radar-sweep {
+  background: conic-gradient(from 0deg, 
+    transparent 0deg, 
+    hsla(145,58%,59%,0.2) 45deg, 
+    hsla(145,58%,59%,0.4) 90deg, 
+    hsla(145,58%,59%,0.2) 135deg, 
+    transparent 180deg, 
+    transparent 360deg);
+}
+
+.fuel-gauge {
+  background: linear-gradient(to top, 
+    hsl(0,84%,60%) 0%, 
+    hsl(23,96%,53%) 25%, 
+    hsl(46,84%,49%) 50%, 
+    hsl(145,63%,49%) 75%, 
+    hsl(217,91%,60%) 100%);
+  position: relative;
+  overflow: hidden;
+}
+.light .fuel-gauge {
+  background: linear-gradient(to top, 
+    hsl(0,74%,70%) 0%, 
+    hsl(23,86%,63%) 25%, 
+    hsl(46,74%,59%) 50%, 
+    hsl(145,53%,59%) 75%, 
+    hsl(217,81%,70%) 100%);
+}
+
+.fuel-gauge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    hsla(0,0%,100%,0.3) 50%, 
+    transparent 100%);
+  animation: fuelFlow 2s ease-in-out infinite;
+}
+.light .fuel-gauge::before {
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    hsla(0,0%,100%,0.5) 50%, 
+    transparent 100%);
+}
+
+.orbital-ring {
+  border: 2px solid hsla(var(--primary),0.3);
+  border-radius: 50%;
+  position: relative;
+}
+.light .orbital-ring {
+  border: 2px solid hsla(var(--primary),0.4);
+}
+
+.orbital-ring::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 2px solid transparent;
+  border-top-color: hsl(var(--primary));
+  border-radius: 50%;
+  animation: orbit 3s linear infinite;
+}
+
+.launch-countdown {
+  background: linear-gradient(135deg, hsl(222,12%,20%) 0%, hsl(220,9%,25%) 100%);
+  border: 3px solid hsl(var(--primary));
+  box-shadow: 
+    inset 0 2px 4px hsla(0,0%,0%,0.3),
+    0 0 30px hsla(var(--primary),0.4);
+  position: relative;
+}
+.light .launch-countdown {
+  background: linear-gradient(135deg, hsl(0,0%,95%) 0%, hsl(0,0%,90%) 100%);
+  border: 3px solid hsl(var(--primary));
+  box-shadow: 
+    inset 0 1px 2px hsla(0,0%,0%,0.1),
+    0 0 20px hsla(var(--primary),0.25);
+}
+
+.launch-countdown::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: linear-gradient(45deg, hsl(0,84%,60%), hsl(23,96%,53%), hsl(46,84%,49%), hsl(145,63%,49%), hsl(217,91%,60%));
+  border-radius: inherit;
+  z-index: -1;
+  animation: borderGlow 2s ease-in-out infinite;
+}
+.light .launch-countdown::before {
+  background: linear-gradient(45deg, hsl(0,74%,70%), hsl(23,86%,63%), hsl(46,74%,59%), hsl(145,53%,59%), hsl(217,81%,70%));
+}
+
+.space-debris {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: hsla(0,0%,100%,0.8);
+  border-radius: 50%;
+  animation: debris 15s linear infinite;
+}
+
+.space-debris:nth-child(2n) {
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.space-debris:nth-child(3n) {
+  animation-delay: 4s;
+  animation-duration: 18s;
+}
+
+.mission-badge {
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  color: #1f2937;
+  border: 2px solid #fbbf24;
+  box-shadow: 0 0 20px hsla(51,100%,50%,0.4);
+  position: relative;
+}
+.light .mission-badge {
+  background: linear-gradient(135deg, hsl(51,100%,60%) 0%, hsl(53,100%,70%) 100%);
+  color: hsl(222,47%,11%);
+  border: 2px solid hsl(45,100%,51%);
+  box-shadow: 0 0 15px hsla(51,100%,60%,0.3);
+}
+
+.mission-badge::before {
+  content: '★';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  animation: badgePulse 2s ease-in-out infinite;
+}
+
+.thruster-effect {
+  background: radial-gradient(ellipse at center, 
+    hsla(0,0%,100%,0.9) 0%, 
+    hsla(51,100%,50%,0.8) 20%, 
+    hsla(33,100%,50%,0.6) 40%, 
+    hsla(16,100%,50%,0.4) 60%, 
+    hsla(0,72%,51%,0.2) 80%, 
+    transparent 100%);
+  animation: thruster 0.5s ease-in-out infinite alternate;
+}

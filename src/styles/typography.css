@@ -1,0 +1,57 @@
+
+.font-orbitron {
+  font-family: 'Orbitron', monospace;
+}
+
+.font-rajdhani {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.neon-text {
+  color: hsl(var(--foreground));
+  text-shadow: 
+    0 0 3px currentColor,
+    0 0 6px currentColor,
+    0 0 9px currentColor,
+    0 0 12px hsl(var(--primary));
+}
+.light .neon-text {
+  color: hsl(var(--primary)); 
+  text-shadow: 
+    0 0 2px hsla(var(--primary), 0.5),
+    0 0 4px hsla(var(--primary), 0.3);
+}
+
+.neon-text-subtle {
+  color: hsl(var(--foreground));
+  text-shadow: 
+    0 0 2px currentColor,
+    0 0 4px currentColor,
+    0 0 6px hsl(var(--primary));
+}
+.light .neon-text-subtle {
+  color: hsl(var(--primary));
+   text-shadow: 
+    0 0 1px hsla(var(--primary), 0.4),
+    0 0 2px hsla(var(--primary), 0.2);
+}
+
+.digital-display {
+  background: #000;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  text-shadow: 0 0 10px #00ff00;
+  border: 2px solid #00ff00;
+  box-shadow: 
+    inset 0 0 10px hsla(120,100%,50%,0.2),
+    0 0 20px hsla(120,100%,50%,0.3);
+}
+.light .digital-display {
+  background: hsl(0,0%,90%);
+  color: hsl(120,100%,25%);
+  text-shadow: 0 0 5px hsla(120,100%,25%,0.5);
+  border: 2px solid hsl(120,100%,35%);
+   box-shadow: 
+    inset 0 0 5px hsla(120,100%,35%,0.1),
+    0 0 10px hsla(120,100%,35%,0.15);
+}
